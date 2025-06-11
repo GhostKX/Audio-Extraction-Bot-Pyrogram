@@ -143,6 +143,7 @@ async def handling_video(client: Client, message: Message):
     audio_file_name = f'{safe_file_name}_{message.video.file_unique_id}.mp3'
     audio_path = os.path.join(user_file, audio_file_name)
     try:
+        # Main code part actually extracts the audio from the video files and saves it in the mp3 file
         subprocess.run([
             'ffmpeg',
             '-i', downloaded_file_path,
