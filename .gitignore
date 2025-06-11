@@ -1,0 +1,16 @@
+.venv/
+.idea/
+.env
+.DS_Store
+__pycache__/
+*.py[cod]
+*.pyo
+logs/
+users_media/
+video_echo_bot.session
+video_echo_bot.session-journal
+user_languages.json
+Thumbs.db
+ehthumbs.db
+
+
