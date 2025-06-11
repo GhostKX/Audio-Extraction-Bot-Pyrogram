@@ -1,6 +1,6 @@
 import json
 
-# Add this near the top of your file (after imports)
+# Languages dictionary, to easily store and call the text by key
 LANGUAGES = {
     'en': {
         'welcome': '''
@@ -136,7 +136,7 @@ LANGUAGES = {
     }
 }
 
-
+# Creating a new json file that would store user's user_ids to remember users' language preferences
 USER_LANGUAGES_FILE = 'user_languages.json'
 
 def load_user_languages():
