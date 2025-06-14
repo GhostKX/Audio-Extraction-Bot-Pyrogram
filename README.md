@@ -406,6 +406,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 Developed by **GhostKX**
 
-**GitHub**: [@GhostKX](https://github.com/GhostKX)
+[![GitHub](https://img.shields.io/badge/GitHub-@GhostKX-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/GhostKX)
 
 </div>
