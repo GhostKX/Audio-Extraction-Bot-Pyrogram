@@ -102,7 +102,7 @@ async def handling_groups_channels(client: Client, message: Message):
     lang = get_user_language(user.id)
     await message.reply_text(LANGUAGES[lang]['group_block'])
 
-
+# Function to check the filename is valid or not
 def sanitize_filename(filename):
     return re.sub(r'[^\w\-_\. ]', '_', filename)
 
