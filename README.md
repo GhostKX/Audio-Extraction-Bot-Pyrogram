@@ -12,7 +12,7 @@
 
 Built using **Pyrogram**, **FFmpeg**, and comprehensive logging, this bot ensures **reliable audio extraction** with detailed activity tracking and error handling.
 
-[🚀 Quick Start](#-installation) • [✨ Features](#-features) • [📱 Usage](#-usage) • [🔧 Configuration](#-configuration) • [🚨 Troubleshooting](#-troubleshooting)
+[🚀 Quick Start](#-installation) • [✨ Features](#-features) • [📱 Usage](#-usage) • [🔧 Configuration](#-configuration) • [📈 Performance Metrics](#-performance-metrics)
 
 ---
 
@@ -383,83 +383,6 @@ The bot creates detailed logs in the `logs/` directory:
 - 💾 **Memory Efficient** - Streaming file processing
 - 🔄 **Smart Cleanup** - Automatic temporary file removal
 - 📊 **Quality Optimization** - Balanced size and quality output
-
----
-
-## 🚨 Troubleshooting
-
-### **Common Issues:**
-
-#### **Bot Not Responding:**
-- ✅ Check if bot token is correct
-- ✅ Verify API credentials in `.env`
-- ✅ Ensure bot is started with `/start`
-
-```bash
-# Check bot token
-python -c "import os; from dotenv import load_dotenv; load_dotenv(); print('Token:', os.getenv('BOT_TOKEN')[:10] + '...')"
-
-# Verify API credentials
-python -c "import os; from dotenv import load_dotenv; load_dotenv(); print('API ID:', os.getenv('API_ID')); print('API Hash:', os.getenv('API_HASH')[:10] + '...')"
-```
-
-#### **Language Issues:**
-- ✅ Use `/lang` command to change language
-- ✅ Check if `user_languages.json` file is writable
-- ✅ Restart bot if language settings don't persist
-
-```bash
-# Check user_languages.json permissions
-ls -la user_languages.json
-chmod 644 user_languages.json
-
-# Reset language file if corrupted
-echo '{}' > user_languages.json
-```
-
-#### **FFmpeg Errors:**
-- ✅ Install FFmpeg properly
-- ✅ Check FFmpeg is in system PATH
-- ✅ Verify video file is not corrupted
-
-```bash
-# Verify FFmpeg installation
-ffmpeg -version
-
-# Test FFmpeg with sample conversion
-ffmpeg -f lavfi -i testsrc2=duration=1:size=320x240:rate=1 -f lavfi -i sine=frequency=1000:duration=1 -c:v libx264 -c:a aac -shortest test_input.mp4
-ffmpeg -i test_input.mp4 -q:a 0 -map a test_output.mp3
-```
-
-#### **File Upload Issues:**
-- ✅ Check file is MP4 format
-- ✅ Ensure file is under 2GB
-- ✅ Try uploading as document if needed
-
-```bash
-# Verify file format
-file your_video.mp4
-ffprobe -v quiet -print_format json -show_format your_video.mp4
-
-# Check temporary directory permissions
-ls -la temp/
-mkdir -p temp
-chmod 755 temp
-```
-
-### **Log Analysis:**
-Check `logs/bot_activity.log` for detailed error information and processing steps.
-
-```bash
-# Find recent errors
-grep -i error logs/bot_activity.log | tail -10
-
-# Check conversion times
-grep -i "conversion completed" logs/bot_activity.log | tail -5
-
-# Monitor user activity
-grep -i "user.*started" logs/bot_activity.log | tail -10
-```
 
 ---
 
