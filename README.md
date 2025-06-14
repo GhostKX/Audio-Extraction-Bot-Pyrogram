@@ -22,7 +22,7 @@ Built using **Pyrogram**, **FFmpeg**, and comprehensive logging, this bot ensure
 
 Transform your video content into high-quality audio files with this sophisticated Telegram bot. Built with **Pyrogram** and **FFmpeg**, it handles files up to **2GB** while maintaining exceptional audio quality and providing a seamless user experience across multiple languages.
 
-### 🏆 **Why Choose This Bot?**
+### 📂 **What's Inside This Bot?**
 - **🎧 Premium Audio Quality** - Preserves original audio fidelity
 - **🌍 Multilingual Support** - English, Russian, and Uzbek interfaces
 - **📊 Enterprise Logging** - Comprehensive activity tracking
